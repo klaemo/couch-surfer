@@ -1,7 +1,7 @@
 {
   "name": "couchsurfer",
   "version": "1.0.0",
-  "description": "pings couchdb view to trigger indexing",
+  "description": "Query couchdb design documents to trigger view rebuilds",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,7 +20,7 @@
     "index"
   ],
   "author": "Clemens Stolle",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/klaemo/couch-surfer/issues"
   },
