@@ -1,0 +1,34 @@
+{
+  "name": "couchsurfer",
+  "version": "1.0.0",
+  "description": "pings couchdb view to trigger indexing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "couchsurfer": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/klaemo/couch-surfer"
+  },
+  "keywords": [
+    "couchdb",
+    "view",
+    "database",
+    "index"
+  ],
+  "author": "Clemens Stolle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klaemo/couch-surfer/issues"
+  },
+  "homepage": "https://github.com/klaemo/couch-surfer",
+  "dependencies": {
+    "async": "~0.2.9",
+    "dashdash": "~1.4.0",
+    "nano": "~4.3.0",
+    "colors": "~0.6.2"
+  }
+}

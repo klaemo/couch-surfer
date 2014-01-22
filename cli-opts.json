@@ -1,0 +1,63 @@
+[
+  {
+    "names": [
+      "user",
+      "u"
+    ],
+    "type": "string",
+    "help": "Couchsurf as the given user (can also be specified in the URL).",
+    "helpArg": "user:pass"
+  },
+  {
+    "names": ["dbs", "d"],
+    "type": "arrayOfString",
+    "help": "Only query the given databases.",
+    "helpArg": "db_name"
+  },
+  {
+    "name": "byUsers",
+    "type": "bool",
+    "help": "Iterate over the dbs of users in '/_users'.",
+    "default": false
+  },
+  {
+    "names": [
+      "filter",
+      "f"
+    ],
+    "type": "string",
+    "help": "RegExp to filter the ddoc names.",
+    "helpArg": "regex"
+  },
+  {
+    "names": [
+      "silent",
+      "s"
+    ],
+    "type": "bool",
+    "default": false,
+    "help": "Don't log progress, just errors."
+  },
+  {
+    "names": [
+      "clean",
+      "c"
+    ],
+    "type": "bool",
+    "default": true,
+    "help": "'-c false' prevents the view cleanup from being run."
+  },
+  {
+    "name": "version",
+    "type": "bool",
+    "help": "Print couchsurfer version and exit."
+  },
+  {
+    "names": [
+      "help",
+      "h"
+    ],
+    "type": "bool",
+    "help": "Print this help and exit."
+  }
+]
