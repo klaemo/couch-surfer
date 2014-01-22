@@ -39,15 +39,6 @@
     "help": "Don't log progress, just errors."
   },
   {
-    "names": [
-      "clean",
-      "c"
-    ],
-    "type": "bool",
-    "default": true,
-    "help": "'-c false' prevents the view cleanup from being run."
-  },
-  {
     "name": "version",
     "type": "bool",
     "help": "Print couchsurfer version and exit."

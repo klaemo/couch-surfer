@@ -107,15 +107,10 @@ module.exports = function (opts) {
         })
       }, function dbDone (err) {
         if (err) return cb(err)
-        if (opts.clean) {
-          couch.relax({ db: name, method: 'post', path: '_view_cleanup' }, function (err) {
-            emitter.emit('cleanup', err, name)
-            cb()
-          })
-          return
-        }
-
-        cb()
+        couch.relax({ db: name, method: 'post', path: '_view_cleanup' }, function (err) {
+          emitter.emit('cleanup', err, name)
+          cb()
+        })
       })
     })
   }
