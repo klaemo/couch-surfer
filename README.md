@@ -29,6 +29,48 @@ options:
     -h, --help                      Print this help and exit.
 ```
 
+#### Examples
+
+These are the same and will query all the design docs in `database` assuming
+`user` is allowed to access this db.
+
+```
+couchsurfer -u user:secret http://couch:5984/database
+couchsurfer http://user:secret@couch:5984/database
+```
+
+Query all the databases the user has access to. If you want to really query all
+the databases in your couch, do this as an admin.
+
+```
+couchsurfer http://user:secret@couch:5984
+```
+
+Only query design docs in `foo` and `bar`
+
+```
+couchsurfer http://user:secret@couch:5984 -d foo -d bar
+```
+
+Look up the registered users in '/_users' and then query their databases with
+the respective name.
+
+```
+couchsurfer http://admin:secret@couch:5984 --byUsers
+```
+
+You can filter the design documents you want to query. Just specify a RegExp.
+
+Only query ddocs whose names begin with `old_`
+```
+couchsurfer http://admin:secret@couch:5984 -f ^old_
+```
+
+Query everything besides `lame_ddoc`
+```
+couchsurfer http://admin:secret@couch:5984 -f [^lame_ddoc]
+```
+
 ### Node Module
 
 Couchsurfer is an event emitter.
