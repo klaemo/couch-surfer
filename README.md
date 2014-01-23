@@ -1,8 +1,12 @@
 Couchsurfer
 ===
-Queries your design documents to trigger view rebuilds.
+Couchsurfer is a friendly utility that checks in with your couchdb to see if
+your view indexes are up-to-date and trigger a re-indexing at the same time.
+This is useful after deploying changes to your views.
 
 ## Installation
+
+This is a [node.js](http://nodejs.org) utility, so you have to install node before you can run `couchsurfer`.
 
 ```
 npm install couchsurfer [-g]
@@ -52,7 +56,7 @@ Only query design docs in `foo` and `bar`
 couchsurfer http://user:secret@couch:5984 -d foo -d bar
 ```
 
-Look up the registered users in '/_users' and then query their databases with
+Look up registered users in `/_users` and then query their databases with
 the respective name.
 
 ```
@@ -66,7 +70,7 @@ Only query ddocs whose names begin with `old_`
 couchsurfer http://admin:secret@couch:5984 -f ^old_
 ```
 
-Query everything besides `lame_ddoc`
+Query everything except `lame_ddoc`
 ```
 couchsurfer http://admin:secret@couch:5984 -f [^lame_ddoc]
 ```
