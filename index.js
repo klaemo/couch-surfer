@@ -90,6 +90,7 @@ module.exports = function (opts) {
         
         db.get(id, function (err, ddoc) {
           if (err) return cb2()
+          if (!ddoc.views) return cb2()
           var views = Object.keys(ddoc.views).filter(function (v) {
             return v !== 'lib'
           })
