@@ -103,3 +103,8 @@ surfer.on('cleanup', function (err, db) {
   console.log('cleaned up views in ' + db)
 })
 ```
+
+## Contributing
+
+If you find a bug, have a feature request or any kind of question, please open
+an issue or submit a pull request. I'm open for discussing any kind of idea for couchsurfer.
