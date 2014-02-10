@@ -39,7 +39,13 @@ surfer.on('end', function() {
 
 surfer.on('ddoc', function (data) {
   var p = [ '', data.db.blue, '_design', data.ddoc, ].join('/')
-  log('built'.green, p, 'in', (data.time + 's').yellow)
+  var time = data.time + 's'
+  if (data.time > 100) {
+    var minutes = Math.floor(data.time / 60)
+    var seconds = parseInt(data.time - minutes * 60)
+    time = minutes + 'min' + seconds + 's'
+  }
+  log('built'.green, p, 'in', time.yellow)
 })
 
 surfer.on('cleanup', function (err, db) {
